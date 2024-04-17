@@ -6,7 +6,7 @@ class Categoria(models.Model):
     
     class Meta:
         ordering = ('nome',) #Retornando na ordem alfabética
-        verbose_name_plural = 'Categorias' #Colocndo no plural a tabela Categoria
+        verbose_name_plural = 'Categorias' #Colocando no plural a tabela Categoria
         
     def __str__(self):
         return self.nome   #Retornando os nomes nas categorias
