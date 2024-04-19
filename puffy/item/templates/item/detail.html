@@ -1,6 +1,6 @@
 {% extends 'core/base.html' %}
 
-{% block title %}{{ item.nome }}{% endblock %}
+{% block title %}{{ item.name }}{% endblock %}
 
 {% block content %}
 
@@ -9,13 +9,13 @@
         <img src="{{ item.image.url }}" class="rounded-xl">
     </div>
     <div class="col-span-2 p-6 bg-gray-100 rounded-xl">
-        <h1 class="mb-6 text-3xl">{{ item.nome }}</h1>
+        <h1 class="mb-6 text-3xl">{{ item.name }}</h1>
         <p class="text-gray-500"><strong>Price: </strong>{{ item.price }}</p>
         <p class="text-gray-500"><strong>Seller: </strong>{{ item.created_by.username }}</p>
-        {% if item.descricao %}
+        {% if item.description %}
         <p class="text-gray-700">
             <strong class="text-gray-500">Description: </strong><br>
-            {{ item.descricao }}
+            {{ item.description }}
         </p>
         {% endif %}
         <span href="#" class="inline-block mt-6 px-6 py-3 text-lg font-semibold bg-teal-600 text-white rounded-xl hover:bg-teal-700"><a href="#">Contact seller</a></span>
@@ -32,7 +32,7 @@
                     <img src={{ item.image.url }} class="rounded-t-xl w-2/3 h-auto">
                 </div>
                 <div class="p-6 bg-white rounded-b-xl w-2/3 h-auto">
-                    <h2 class="text-2xl">{{ item.nome }}</h2>
+                    <h2 class="text-2xl">{{ item.name }}</h2>
                     <p class="text-gray-500">Price: {{ item.price }}</p>
                 </div>
             </a>
