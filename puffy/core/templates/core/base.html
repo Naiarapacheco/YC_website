@@ -18,7 +18,7 @@
         <div class="space-x-6">
             
             <a href="{% url 'item:new' %}" class="text-lg font-semibold hover:text-gray-500">New Product</a>
-            <a href="#" class="text-lg font-semibold hover:text-gray-500">Browse</a>
+            <a href="{% url 'item:browse' %}" class="text-lg font-semibold hover:text-gray-500">Browse</a>
 
             {% if request.user.is_authenticated %}
             <a href="#" class="px-5 py-3 text-lg font-semibold bg-teal-700 rounded text-white hover:bg-teal-800">Inbox</a>
